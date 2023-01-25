@@ -10,30 +10,30 @@
 
 - <https://go.dev/src/net/http/transport.go>
 
-```shell
-❯ time go run client/main.go
-&{200 OK 200 HTTP/1.1 1 1 map[Content-Length:[0] Date:[Mon, 23 Jan 2023 12:39:52 GMT]] {} 0 [] false false map[] 0x1400017e000 <nil>}
-go run client/main.go  0.20s user 0.18s system 0% cpu 1:40.37 total
-```
+    ```shell
+    ❯ time go run client/main.go
+    &{200 OK 200 HTTP/1.1 1 1 map[Content-Length:[0] Date:[Mon, 23 Jan 2023 12:39:52 GMT]] {} 0 [] false false map[] 0x1400017e000 <nil>}
+    go run client/main.go  0.20s user 0.18s system 0% cpu 1:40.37 total
+    ```
 
-1. Reasonable timeouts (`client-timeout` folder)`
+2. Reasonable timeouts (`client-timeout` folder)`
 
-```shell
-time go run client-timeout/main.go
-<nil>
-go run client-timeout/main.go  0.23s user 0.24s system 4% cpu 10.909 total
-```
+    ```shell
+    time go run client-timeout/main.go
+    <nil>
+    go run client-timeout/main.go  0.23s user 0.24s system 4% cpu 10.909 total
+    ```
 
-1. Custom client (`client-custom` folder)
+3. Custom client (`client-custom` folder)
 
-```shell
-➜ time go run client-ctx/main.go
-<nil>
-go run client-ctx/main.go  1.48s user 0.39s system 30% cpu 6.167 total
-```
+    ```shell
+    ➜ time go run client-ctx/main.go
+    <nil>
+    go run client-ctx/main.go  1.48s user 0.39s system 30% cpu 6.167 total
+    ```
 
-1. Active cancellation (`client-ctx` folder)`
+4. Active cancellation (`client-ctx` folder)`
 
-```shell
-time go run client-ctx/main.go
-```
+    ```shell
+    time go run client-ctx/main.go
+    ```
