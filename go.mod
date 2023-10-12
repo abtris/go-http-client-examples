@@ -2,6 +2,6 @@ module http-defaults
 
 go 1.19
 
-require golang.org/x/net v0.5.0
+require golang.org/x/net v0.17.0
 
-require golang.org/x/text v0.6.0 // indirect
+require golang.org/x/text v0.13.0 // indirect
